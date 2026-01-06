@@ -18,9 +18,27 @@ Tiden er grovt estimert og avhenger av, blant annet, tidligere kjennskap til tem
   \- Fokus: Dataredundans, \`HashMap\` for "joins" i minnet.  
   \- Analysere lagringsbesparelse og vurdere minnebruk (RAM).
 
-**Oppgave 4:** Kraften av Indeksering (ca. 1.5 timer \+ Bonus)  
+**Oppgave 4:** Kraften av Indeksering (ca. 1.5 timer)  
   \- Fokus: Ytelsesgevinst ved indeksering.  
   \- Kvantifisere kostnaden (i lagring) av en indeks og koble ytelsesgevinsten til I/O-kostnadsmodellen.
+
+## Programmeringsmiljø og testing
+
+Viktige momenter:
+- For å utføre koden må `java` være installert. Under utvikling av denne oppgaven ble `openjdk 25.0.1` på en `macOS Sonoma 14.3.1` brukt. 
+- Man kan selv velge om man ønsker å bruke en IDE (Integrated Development Environment) eller en frittstående editor (Sublime Text ble brukt under utviklingen av oppgaven).
+- Denne repository-en inneholder en skript for "autograding", dvs. at tester på koden utføres, hver gang man gjør en "commit" fra sin lokale datamaskin. En "commit" betyr at man kopierer koden fra sin lokale datamaskin til repository-en i Github (den består av tre steg: `git add`, `git commit` og `git push`). Hver "commit" vil starte en prosess (Github actions) i en nettsky, som krever en god del energi for å bli utført. Derfor, er det sterkt anbefalt å teste koden før man gjør en "commit" til Github. I denne repository-en finnes det 3 skript-filer:
+  - `test-local.sh` (for macOS og Linux)
+  - `test-local.bat` (for MS Windows, kaller opp test-local.psi)
+  - `test-local.psi` (for MS Windows Powershell)
+
+Du må selv sørge for at skript-filen har de nødvendige rettighetene for å kunne bli utført. På macOS og Linux skal man utføre følgende kommandoer:
+```
+$ git clone <repository_med_oppgaven>
+$ cd <repository_navn>
+$ chmod 755 test-local.sh
+```
+
 
 ## Deloppgaver
 
